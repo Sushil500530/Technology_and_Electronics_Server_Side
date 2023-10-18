@@ -29,6 +29,19 @@ const communication = [{
 }, {
     id: 6, thumbnail: "https://i.ibb.co/0JwHbng/Adobe-Stock-593424439-Preview.jpg", name: "community", description: "Communication is usually understood as the transmission of information. Its precise definition is disputed and there are disagreements about whether unintentional", category: "communication", price: 250,
 }]
+const gps = [{
+    id: 1, thumbnail: "https://i.ibb.co/ckPKPC4/The-test-routes-visualised-on-Google-Maps-using-GPS-data.png", name: "map", description: "The Global Positioning System , originally Navstar GPS, is a satellite-based radio navigation system owned by the United States government and operated by the United States Space Force", category: "gps", price: 280,
+}, {
+    id: 2, thumbnail: "https://i.ibb.co/2nYVLRT/side-view-woman-working-laptop.jpg", name: "device gps", description: "community is usually understood as the transmission of information. Its precise definition is disputed and there are disagreements about whether unintentional", category: "gps", price: 320,
+}, {
+    id: 3, thumbnail: "https://i.ibb.co/f1vnk3m/oskar-kadaksoo-MKh27b-PCPGc-unsplash.jpg", name: "article", description: "The Global Positioning System , originally Navstar GPS, is a satellite-based radio navigation system owned by the United States government and operated by the United States Space Force", category: "gps", price: 280,
+}, {
+    id: 4, thumbnail: "https://i.ibb.co/PwSD0nj/david-grandmougin-Am1io6-Kus-FM-unsplash.jpg", name: "phones gps gps", description: "The Global Positioning System , originally Navstar GPS, is a satellite-based radio navigation system owned by the United States government and operated by the United States Space Force", category: "gps", price: 400,
+}, {
+    id: 5, thumbnail: "https://i.ibb.co/4KChRQd/5151531-51520.jpg", name: "architecture", description: "The Global Positioning System , originally Navstar GPS, is a satellite-based radio navigation system owned by the United States government and operated by the United States Space Force", category: "gps", price: 480,
+}, {
+    id: 6, thumbnail: "https://i.ibb.co/27Dnp63/3d-view-map.jpg", name: "locator", description: "The Global Positioning System , originally Navstar GPS, is a satellite-based radio navigation system owned by the United States government and operated by the United States Space Force", category: "gps", price: 250,
+}]
 
 // middleware
 app.use(cors());
@@ -60,7 +73,9 @@ async function run() {
         app.get('/communication', (req, res) => {
             res.send(communication)
         })
-
+        app.get('/gps', (req,res) => {
+            res.send(gps)
+        })
 
 
 
