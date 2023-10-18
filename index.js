@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 require('dotenv').config()
 const app = express();
 const port = process.env.PORT || 5000;
@@ -34,7 +34,7 @@ const gps = [{
 }, {
     id: 2, thumbnail: "https://i.ibb.co/2nYVLRT/side-view-woman-working-laptop.jpg", name: "device gps", description: "community is usually understood as the transmission of information. Its precise definition is disputed and there are disagreements about whether unintentional", category: "gps", price: 320,
 }, {
-    id: 3, thumbnail: "https://i.ibb.co/f1vnk3m/oskar-kadaksoo-MKh27b-PCPGc-unsplash.jpg", name: "article", description: "The Global Positioning System , originally Navstar GPS, is a satellite-based radio navigation system owned by the United States government and operated by the United States Space Force", category: "gps", price: 280,
+    id: 3, thumbnail: "https://i.ibb.co/f1vnk3m/oskar-kadaksoo-MKh27b-PCPGc-unsplash.jpg", name: "article", description: "The Global Positioning System , originally Navstar GPS, is a satellite-based radio navigation system owned by the United States government and operated by the United States Space Force", category: "gps", price: 260,
 }, {
     id: 4, thumbnail: "https://i.ibb.co/PwSD0nj/david-grandmougin-Am1io6-Kus-FM-unsplash.jpg", name: "phones gps gps", description: "The Global Positioning System , originally Navstar GPS, is a satellite-based radio navigation system owned by the United States government and operated by the United States Space Force", category: "gps", price: 400,
 }, {
@@ -64,7 +64,7 @@ async function run() {
         await client.connect();
         const technologyCollection = client.db('technologyDB').collection('technology')
         const userCollection = client.db('technologyDB').collection('users')
-
+        const commnunicationCollection = client.db('technologyDB').collection('communication')
 
         app.get('/technology', (req, res) => {
             res.send(data)
@@ -73,11 +73,17 @@ async function run() {
         app.get('/communication', (req, res) => {
             res.send(communication)
         })
-        app.get('/gps', (req,res) => {
+        app.get('/gps', (req, res) => {
             res.send(gps)
         })
 
-
+        // use get from browser
+        app.post('/cart', async(req,res) => {
+           const addCart = req.body;
+            console.log('id ki paicis', addCart);
+            const result = await commnunicationCollection.insertOne(addCart);
+            res.send(result)
+        })
 
 
 
