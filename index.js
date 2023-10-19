@@ -15,43 +15,43 @@ const brandName = [
         }],
         collection: [
             {
-                id: 11,
+                id: 1,
                 image: "https://i.ibb.co/Qb4N8zs/thai-nguyen-X5-V7hb7-Cx-NY-unsplash.jpg",
                 title: "iphone 15",
                 description: "The iPhone 15 and iPhone 15 Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation iPhones",
-                category: "communication",
+                category: "apple",
                 price: 20280
             },
             {
-                id: 12,
+                id: 2,
                 image: "https://i.ibb.co/ZThT2zM/miguel-tomas-f-PZy-N5-Eih5-E-unsplash.jpg",
                 title: "iphone 16",
                 description: "The iPhone 16 and iPhone 15 Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation iPhones",
-                category: "communication",
+                category: "apple",
                 price: 35800
             },
             {
-                id: 13,
+                id: 3,
                 image: "https://i.ibb.co/qmRKMBD/daniel-romero-Ie-ZZ2-Wc-XIw-unsplash.jpg",
                 title: "iphone 13",
                 description: "The iPhone 13 and iPhone 15 Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation iPhones",
-                category: "communication",
+                category: "apple",
                 price: 22200
             },
             {
-                id: 14,
+                id: 4,
                 image: "https://i.ibb.co/Jx3PtM4/brandon-romanchuk-NOFy-Rm-SQf-UQ-unsplash.jpg",
                 title: "iphone 12",
                 description: "The iPhone 12 and iPhone 15 Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation iPhones",
-                category: "communication",
+                category: "apple",
                 price: 12800
             },
             {
-                id: 15,
+                id: 5,
                 image: "https://i.ibb.co/gzGBCt7/bagus-hernawan-v-Xml-V3fber-Q-unsplash.jpg",
                 title: "iphone 15 pro",
                 description: "The iPhone 15 pro and iPhone 15 Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation iPhones",
-                category: "communication",
+                category: "apple",
                 price: 40280
             }
         ]
@@ -65,43 +65,43 @@ const brandName = [
         }],
         collection: [
             {
-                id: 11,
+                id: 1,
                 image: "https://i.ibb.co/w6wcqf7/anh-nhat-u-Cq-Ma-s-JDg-unsplash.jpg",
                 title: "samsung s21+",
                 description: "The samsung and samsung Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation samsungs",
-                category: "communication",
+                category: "samsung",
                 price: 20280
             },
             {
-                id: 12,
+                id: 2,
                 image: "https://i.ibb.co/v4Lws0j/anh-nhat-yqclo-Mb3-Abw-unsplash.jpg",
                 title: "samsung s22+",
                 description: "The samsung and samsung Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation samsungs",
-                category: "communication",
+                category: "samsung",
                 price: 35800
             },
             {
-                id: 13,
+                id: 3,
                 image: "https://i.ibb.co/9HwxrPf/daniel-romero-f-Nq-ZZi5-M73-Y-unsplash.jpg",
                 title: "samsung A75",
                 description: "The samsung and samsung Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation samsungs",
-                category: "communication",
+                category: "samsung",
                 price: 22200
             },
             {
-                id: 14,
+                id: 4,
                 image: "https://i.ibb.co/brWhxxZ/jonas-leupe-Ggw9-Tkdr-AA0-unsplash.jpg",
                 title: "samsung quete ss+",
                 description: "The samsung and samsung Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation samsungs",
-                category: "communication",
+                category: "samsung",
                 price: 12800
             },
             {
-                id: 15,
+                id: 5,
                 image: "https://i.ibb.co/V90M6vr/zana-latif-5u-JMG9f-UAO0-unsplash.jpg",
                 title: "samsung s23+",
                 description: "The samsung and samsung Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation samsungs",
-                category: "communication",
+                category: "samsung",
                 price: 40280
             }
         ]
@@ -115,7 +115,7 @@ const brandName = [
         }],
         collection: [
             {
-                id: 11,
+                id: 1,
                 image: "https://i.ibb.co/Y0Zr8PH/theregisti-emz-Dj-EN-d-8-unsplash.jpg",
                 title: "digital camra",
                 description: "The digital camra and digital camra Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation digital camras",
@@ -123,7 +123,7 @@ const brandName = [
                 price: 20280
             },
             {
-                id: 12,
+                id: 2,
                 image: "https://i.ibb.co/5LLLXsf/logan-moreno-gutierrez-9-BIdt62-W724-unsplash.jpg",
                 title: "sony headphone",
                 description: "The sony headphone and sony headphone Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation sony headphones",
@@ -131,7 +131,7 @@ const brandName = [
                 price: 35800
             },
             {
-                id: 13,
+                id: 3,
                 image: "https://i.ibb.co/tY1C0Bs/alexander-london-9g-Iu-Cd8ia-Q-unsplash.jpg",
                 title: "Boosted sony",
                 description: "The Boosted sony and Boosted sony Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation Boosted sonys",
@@ -139,7 +139,7 @@ const brandName = [
                 price: 22200
             },
             {
-                id: 14,
+                id: 4,
                 image: "https://i.ibb.co/F0B7NSD/alex-amva-h4x-Z7704-Bg-unsplash.jpg",
                 title: "sony xz",
                 description: "The sony xz and sony xz Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation sony xz ",
@@ -147,7 +147,7 @@ const brandName = [
                 price: 12800
             },
             {
-                id: 15,
+                id: 5,
                 image: "https://i.ibb.co/DgH1Nrx/alwin-thomas-Xzm-SEd-Wu-Ck-unsplash.jpg",
                 title: "portal camra",
                 description: "The portal camra and portal camra Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation portal camras",
@@ -165,7 +165,7 @@ const brandName = [
         }],
         collection: [
             {
-                id: 11,
+                id: 1,
                 image: "https://i.ibb.co/ZJvtHt7/franco-gancis-Js-V51nox-RCQ-unsplash.jpg",
                 title: "google pixel 7",
                 description: "The google pixel 7 and google pixel 7 Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation google pixel 7s",
@@ -173,7 +173,7 @@ const brandName = [
                 price: 20280
             },
             {
-                id: 12,
+                id: 2,
                 image: "https://i.ibb.co/wKS9VST/juairia-islam-shefa-MKSh191933w-unsplash.jpg",
                 title: "google pixel 5",
                 description: "The google pixel 5 and google pixel 5 Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation google pixel 5 ",
@@ -181,7 +181,7 @@ const brandName = [
                 price: 35800
             },
             {
-                id: 13,
+                id: 3,
                 image: "https://i.ibb.co/HKkpbsC/mateo-abrahan-v-Vmfi-yh-Csc-unsplash.jpg",
                 title: "smart watch",
                 description: "The smart watch and smart watch Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation smart watchs",
@@ -189,7 +189,7 @@ const brandName = [
                 price: 22200
             },
             {
-                id: 14,
+                id: 4,
                 image: "https://i.ibb.co/qMrCWfJ/pawel-czerwinski-fp-ZZEV0u-Qw-A-unsplash.jpg",
                 title: "google locator",
                 description: "The google locator and google locator Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation google locator ",
@@ -197,7 +197,7 @@ const brandName = [
                 price: 12800
             },
             {
-                id: 15,
+                id: 5,
                 image: "https://i.ibb.co/ZJvtHt7/franco-gancis-Js-V51nox-RCQ-unsplash.jpg",
                 title: "google pixel 7",
                 description: "The google pixel 7 and google pixel 7 Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation google pixel 7s",
@@ -215,7 +215,7 @@ const brandName = [
         }],
         collection: [
             {
-                id: 11,
+                id: 1,
                 image: "https://i.ibb.co/WV4QT92/andrey-matveev-v-Wc2s-Ty-S6s-I-unsplash.jpg",
                 title: "intel 2A196",
                 description: "The intel and intel Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation intels",
@@ -223,7 +223,7 @@ const brandName = [
                 price: 20280
             },
             {
-                id: 12,
+                id: 2,
                 image: "https://i.ibb.co/pbp57M5/bermix-studio-t-Turh-Pw9bw-Q-unsplash.jpg",
                 title: "intel 8086",
                 description: "The intel and intel Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation intels",
@@ -231,7 +231,7 @@ const brandName = [
                 price: 35800
             },
             {
-                id: 13,
+                id: 3,
                 image: "https://i.ibb.co/xh4XJq9/christian-wiediger-Htfy7-Ta-DBgo-unsplash.jpg",
                 title: "intel 8045",
                 description: "The intel and intel Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation intels",
@@ -239,7 +239,7 @@ const brandName = [
                 price: 22200
             },
             {
-                id: 14,
+                id: 4,
                 image: "https://i.ibb.co/4FtVcb2/gamercomp-Rl-Po-DAo6-WCI-unsplash.jpg",
                 title: "intel 80148",
                 description: "The intel and intel Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation intels",
@@ -247,7 +247,7 @@ const brandName = [
                 price: 12800
             },
             {
-                id: 15,
+                id: 5,
                 image: "https://i.ibb.co/bm9n34y/slejven-djurakovic-0u-Xzo-Ez-YZ4-I-unsplash.jpg",
                 title: "intel 80188",
                 description: "The intel and intel Plus are smartphones designed, developed, and marketed by Apple Inc. They are the seventeenth-generation intels",
