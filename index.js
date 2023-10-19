@@ -64,7 +64,7 @@ async function run() {
         await client.connect();
         const technologyCollection = client.db('technologyDB').collection('technology')
         const userCollection = client.db('technologyDB').collection('users')
-        const commnunicationCollection = client.db('technologyDB').collection('communication')
+        const cartCollection = client.db('technologyDB').collection('communication')
 
         app.get('/technology', (req, res) => {
             res.send(data)
@@ -80,12 +80,26 @@ async function run() {
         // use get from browser
         app.post('/cart', async(req,res) => {
            const addCart = req.body;
-            console.log('id ki paicis', addCart);
-            const result = await commnunicationCollection.insertOne(addCart);
+            console.log('add to', addCart);
+            const result = await cartCollection.insertOne(addCart);
             res.send(result)
         })
 
+        // get cart all data 
+        app.get('/cart', async(req,res) => {
+            const findCart = cartCollection.find();
+            const result = await findCart.toArray();
+            res.send(result)
+        })
 
+        app.delete('/cart/:id', async(req,res) => {
+            const id = req.params.id;
+            console.log('delete id is', id);
+            const query = {_id: new ObjectId(id)}
+            const result = await cartCollection.deleteOne(query);
+            res.send(result)
+        })
+     
 
 
 
