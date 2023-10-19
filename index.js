@@ -91,7 +91,7 @@ async function run() {
             const result = await findCart.toArray();
             res.send(result)
         })
-
+        // delete cart 
         app.delete('/cart/:id', async(req,res) => {
             const id = req.params.id;
             console.log('delete id is', id);
@@ -99,8 +99,32 @@ async function run() {
             const result = await cartCollection.deleteOne(query);
             res.send(result)
         })
+        // get unique id 
+        app.get('/cart/:id', async(req,res) => {
+            const id = req.params.id;
+            const query = {_id: new ObjectId(id)}
+            const result = await cartCollection.findOne(query);
+            res.send(result)
+        })
      
-
+        // updated cart 
+        app.put('/cart/:id', async (req, res) => {
+            const id = req.params.id;
+            const filter = { _id: new ObjectId(id) };
+            const options = { upsert: true };
+            const updatedProduct = req.body;
+            const coffee = {
+              $set: {
+                name: updatedProduct.name,
+                price: updatedProduct.price,
+                description: updatedProduct.description,
+                category: updatedProduct.category,
+                photo: updatedProduct.photo
+              }
+            }
+            const result = await cartCollection.updateOne(filter, coffee, options);
+            res.send(result)
+          })
 
 
 
