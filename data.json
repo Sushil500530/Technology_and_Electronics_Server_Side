@@ -1,11 +1,27 @@
-const express = require('express');
-const cors = require('cors');
-const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
-require('dotenv').config()
-const app = express();
-const port = process.env.PORT || 5000;
-
-const brandName = [
+[
+  [
+    {
+      "thumbnail": "https://i.ibb.co/rFphrZW/Screenshot-2023-12-13-131800.png",
+      "category": "apple"
+    },
+    {
+      "thumbnail": "https://i.ibb.co/w07vQKx/zana-latif-5u-JMG9f-UAO0-unsplash.jpg",
+      "category": "samsung"
+    },
+    {
+      "thumbnail": "https://i.ibb.co/9YRJCwJ/alwin-thomas-Xzm-SEd-Wu-Ck-unsplash.jpg",
+      "category": "sony"
+    },
+    {
+      "thumbnail": "https://i.ibb.co/gzR07dQ/pawel-czerwinski-fp-ZZEV0u-Qw-A-unsplash.jpg",
+      "category": "google"
+    },
+    {
+      "thumbnail": "https://i.ibb.co/BCDmRZT/bermix-studio-t-Turh-Pw9bw-Q-unsplash.jpg",
+      "category": "intel"
+    }
+  ],
+  [
     {
         "slider": [{
             "img1": "https://i.ibb.co/7QgTs1C/bagus-hernawan-v-Xml-V3fber-Q-unsplash.jpg",
@@ -228,169 +244,5 @@ const brandName = [
         "price": 40280
     }
 
+  ]
 ]
-
-
-const communication = [{
-    "thumbnail": "https://i.ibb.co/wdZM1dc/Adobe-Stock-593424439-Preview.jpg", "title": "smart touch", "description": "Communication is usually understood as the transmission of information. Its precise definition is disputed and there are disagreements about whether unintentional", "category": "communication", "price": 280,
-},
-{
-    "thumbnail": "https://i.ibb.co/yX8j4Sf/Adobe-Stock-610728942-Preview.jpg", "title": "community", "description": "community is usually understood as the transmission of information. Its precise definition is disputed and there are disagreements about whether unintentional", "category": "communication", "price": 320,
-},
-{
-    "thumbnail": "https://i.ibb.co/cJfpZpR/Adobe-Stock-619172259-Preview-1.jpg", "title": "research", "description": "Communication is usually understood as the transmission of information. Its precise definition is disputed and there are disagreements about whether unintentional", "category": "communication", "price": 280,
-},
-{
-    "thumbnail": "https://i.ibb.co/QkngdqV/Adobe-Stock-628395923-Preview-1.jpg", "title": "instruction communication", "description": "Communication is usually understood as the transmission of information. Its precise definition is disputed and there are disagreements about whether unintentional", "category": "communication", "price": 400,
-},
-{
-    "thumbnail": "https://i.ibb.co/WVdHRk1/Adobe-Stock-629775658-Preview.jpg", "title": "digital tech", "description": "Communication is usually understood as the transmission of information. Its precise definition is disputed and there are disagreements about whether unintentional", "category": "communication", "price": 480,
-},
-{
-    "thumbnail": "https://i.ibb.co/WVTLwPd/Adobe-Stock-61917225945-Preview.jpg", "title": "community", "description": "Communication is usually understood as the transmission of information. Its precise definition is disputed and there are disagreements about whether unintentional", "category": "communication", "price": 250,
-}];
-const gps = [{
-    "thumbnail": "https://i.ibb.co/H7ZV9YS/3d-view-map.jpg", "title": "map", "description": "The Global Positioning System , originally Navstar GPS, is a satellite-based radio navigation system owned by the United States government and operated by the United States Space Force", "category": "gps", "price": 280,
-},
-{
-    "thumbnail": "https://i.ibb.co/s9dd1XD/5151531-51520.jpg", "title": "device gps", "description": "community is usually understood as the transmission of information. Its precise definition is disputed and there are disagreements about whether unintentional", "category": "gps", "price": 320,
-},
-{
-    "thumbnail": "https://i.ibb.co/9VsdnHW/oskar-kadaksoo-MKh27b-PCPGc-unsplash.jpg", "title": "article", "description": "The Global Positioning System , originally Navstar GPS, is a satellite-based radio navigation system owned by the United States government and operated by the United States Space Force", "category": "gps", "price": 260,
-},
-{
-    "thumbnail": "https://i.ibb.co/c61wXjz/david-grandmougin-Am1io6-Kus-FM-unsplash.jpg", "title": "phones gps gps", "description": "The Global Positioning System , originally Navstar GPS, is a satellite-based radio navigation system owned by the United States government and operated by the United States Space Force", "category": "gps", "price": 400,
-},
-{
-    "thumbnail": "https://i.ibb.co/b6JSbMj/side-view-woman-working-laptop.jpg", "title": "architecture", "description": "The Global Positioning System , originally Navstar GPS, is a satellite-based radio navigation system owned by the United States government and operated by the United States Space Force", "category": "gps", "price": 480,
-},
-{
-    "thumbnail": "https://i.ibb.co/9HWjF4q/The-test-routes-visualised-on-Google-Maps-using-GPS-data.png", "title": "locator", "description": "The Global Positioning System , originally Navstar GPS, is a satellite-based radio navigation system owned by the United States government and operated by the United States Space Force", "category": "gps", "price": 250,
-}];
-
-// middleware
-app.use(cors());
-app.use(express.json());
-
-
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.ruakr2a.mongodb.net/?retryWrites=true&w=majority`;
-
-const client = new MongoClient(uri, {
-    serverApi: {
-        version: ServerApiVersion.v1,
-        strict: true,
-        deprecationErrors: true,
-    }
-});
-
-async function run() {
-    try {
-
-        await client.connect();
-        const technologyCollection = client.db('technologyDB').collection('technology');
-        const userCollection = client.db('technologyDB').collection('users');
-        const categoryCollection = client.db('technologyDB').collection('category')
-        const cartCollection = client.db('technologyDB').collection('myCarts');
-
-        app.get('/technology', async (req, res) => {
-            const result = await technologyCollection.find().toArray();
-            res.send(result)
-        })
-
-        app.get('/technology/:category', async (req, res) => {
-            const category = req.params.category;
-            const query = { category: category };
-            const result = await categoryCollection.find(query).toArray();
-            res.send(result);
-        })
-        // find one 
-        app.get('/category/:id', async (req, res) => {
-            const id = req.params.id;
-            const query = { _id: new ObjectId(id) };
-            const result = await categoryCollection.find(query).toArray();
-            res.send(result);
-        })
-        // find unique id 
-        // app.get('/technology/:id', async (req, res) => {
-        //     const id = req.params.id;
-        //     console.log('delete id is', id);
-        //     const query = { _id: new ObjectId(id) }
-        //     const result = await cartCollection.deleteOne(query);
-        //     res.send(result)
-        // })
-
-        app.get('/communication', (req, res) => {
-            res.send(communication)
-        })
-        app.get('/gps', (req, res) => {
-            res.send(gps)
-        })
-        //  my cart api 
-        // use get from browser
-        app.post('/cart', async (req, res) => {
-            const addCart = req.body;
-            console.log('add to', addCart);
-            const result = await cartCollection.insertOne(addCart);
-            res.send(result)
-        })
-
-        // get cart all data 
-        app.get('/carts', async (req, res) => {
-            const findCart = cartCollection.find();
-            const result = await findCart.toArray();
-            res.send(result)
-        })
-        app.get('/user', async (req, res) => {
-            const findCart = userCollection.find();
-            const result = await findCart.toArray();
-            res.send(result)
-        })
-        // delete cart 
-        app.delete('/cart/:id', async (req, res) => {
-            const id = req.params.id;
-            console.log('delete id is', id);
-            const query = { _id: new ObjectId(id) }
-            const result = await cartCollection.deleteOne(query);
-            res.send(result)
-        })
-        // get unique id 
-        app.get('/cart/:id', async (req, res) => {
-            const id = req.params.id;
-            const query = { _id: new ObjectId(id) }
-            const result = await cartCollection.findOne(query);
-            res.send(result)
-        })
-
-        // updated cart 
-        app.put('/updated/:id', async (req, res) => {
-            const updatedProduct = req.body;
-            const id = req.params.id;
-            const filter = { _id: new ObjectId(id) };
-            const options = { upsert: true };
-            const coffee = {
-                $set: {
-                    ...updatedProduct
-                }
-            }
-            const result = await categoryCollection.updateOne(filter, coffee, options);
-            res.send(result)
-        })
-
-        await client.db("admin").command({ ping: 1 });
-        console.log("Pinged your deployment. You successfully connected to MongoDB!");
-    } finally {
-        // Ensures that the client will close when you finish/error
-        // await client.close();
-    }
-}
-run().catch(console.dir);
-
-
-
-
-app.get('/', (req, res) => {
-    res.send("CRUD is Running")
-})
-app.listen(port, () => {
-    console.log(`CRUD is Running on port : ${port}`);
-})
