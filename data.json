@@ -244,5 +244,45 @@
         "price": 40280
     }
 
-  ]
+  ],
+  [
+    {
+        "thumbnail": "https://i.ibb.co/wdZM1dc/Adobe-Stock-593424439-Preview.jpg", "title": "smart touch", "description": "Communication is usually understood as the transmission of information. Its precise definition is disputed and there are disagreements about whether unintentional", "category": "communication", "price": 280
+    },
+    {
+        "thumbnail": "https://i.ibb.co/yX8j4Sf/Adobe-Stock-610728942-Preview.jpg", "title": "community", "description": "community is usually understood as the transmission of information. Its precise definition is disputed and there are disagreements about whether unintentional", "category": "communication", "price": 320
+    },
+    {
+        "thumbnail": "https://i.ibb.co/cJfpZpR/Adobe-Stock-619172259-Preview-1.jpg", "title": "research", "description": "Communication is usually understood as the transmission of information. Its precise definition is disputed and there are disagreements about whether unintentional", "category": "communication", "price": 280
+    },
+    {
+        "thumbnail": "https://i.ibb.co/QkngdqV/Adobe-Stock-628395923-Preview-1.jpg", "title": "instruction communication", "description": "Communication is usually understood as the transmission of information. Its precise definition is disputed and there are disagreements about whether unintentional", "category": "communication", "price": 400
+    },
+    {
+        "thumbnail": "https://i.ibb.co/WVdHRk1/Adobe-Stock-629775658-Preview.jpg", "title": "digital tech", "description": "Communication is usually understood as the transmission of information. Its precise definition is disputed and there are disagreements about whether unintentional", "category": "communication", "price": 480
+    },
+    {
+        "thumbnail": "https://i.ibb.co/WVTLwPd/Adobe-Stock-61917225945-Preview.jpg", "title": "community", "description": "Communication is usually understood as the transmission of information. Its precise definition is disputed and there are disagreements about whether unintentional", "category": "communication", "price": 250
+    }
+],
+[
+    {
+        "thumbnail": "https://i.ibb.co/H7ZV9YS/3d-view-map.jpg", "title": "map", "description": "The Global Positioning System , originally Navstar GPS, is a satellite-based radio navigation system owned by the United States government and operated by the United States Space Force", "category": "gps", "price": 280
+    },
+    {
+        "thumbnail": "https://i.ibb.co/s9dd1XD/5151531-51520.jpg", "title": "device gps", "description": "community is usually understood as the transmission of information. Its precise definition is disputed and there are disagreements about whether unintentional", "category": "gps", "price": 320
+    },
+    {
+        "thumbnail": "https://i.ibb.co/9VsdnHW/oskar-kadaksoo-MKh27b-PCPGc-unsplash.jpg", "title": "article", "description": "The Global Positioning System , originally Navstar GPS, is a satellite-based radio navigation system owned by the United States government and operated by the United States Space Force", "category": "gps", "price": 260
+    },
+    {
+        "thumbnail": "https://i.ibb.co/c61wXjz/david-grandmougin-Am1io6-Kus-FM-unsplash.jpg", "title": "phones gps gps", "description": "The Global Positioning System , originally Navstar GPS, is a satellite-based radio navigation system owned by the United States government and operated by the United States Space Force", "category": "gps", "price": 400
+    },
+    {
+        "thumbnail": "https://i.ibb.co/b6JSbMj/side-view-woman-working-laptop.jpg", "title": "architecture", "description": "The Global Positioning System , originally Navstar GPS, is a satellite-based radio navigation system owned by the United States government and operated by the United States Space Force", "category": "gps", "price": 480
+    },
+    {
+        "thumbnail": "https://i.ibb.co/9HWjF4q/The-test-routes-visualised-on-Google-Maps-using-GPS-data.png", "title": "locator", "description": "The Global Positioning System , originally Navstar GPS, is a satellite-based radio navigation system owned by the United States government and operated by the United States Space Force", "category": "gps", "price": 250
+    }
+]
 ]
